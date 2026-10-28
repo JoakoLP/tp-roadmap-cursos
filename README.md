@@ -12,6 +12,34 @@
 
 OpenRoadmap resuelve la dispersión de recursos educativos gratuitos en la web. Permite a una comunidad de estudiantes aportar cursos de cualquier plataforma (YouTube, Coursera, edX, open-source), validarlos bajo criterios de calidad y centralizarlos en un catálogo público paginado. A partir de este catálogo, cada estudiante puede diseñar, ordenar y seguir su propio **roadmap personal de aprendizaje**, registrando su progreso de forma transparente.
 
+## Cómo levantar el proyecto
+
+### Prerrequisitos
+- Git
+- Docker y Docker Compose
+- Node.js (v20+) y pnpm (para ejecución local sin Docker)
+- Python (3.12+) y uv (para ejecución local sin Docker)
+
+### Entorno de desarrollo rápido (Docker Compose)
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/JoakoLP/tp-roadmap-cursos.git
+cd tp-roadmap-cursos
+
+# 2. Configurar variables de entorno
+cp .env.example .env
+
+# 3. Levantar los servicios con Docker Compose (PostgreSQL 18.6 + Backend + Frontend)
+docker compose up --build
+```
+
+Una vez levantados los servicios:
+- **Frontend (React 19 + Vite):** [http://localhost:5173](http://localhost:5173)
+- **Backend API (FastAPI):** [http://localhost:8000](http://localhost:8000)
+- **Documentación Swagger:** [http://localhost:8000/docs](http://localhost:8000/docs)
+- **Healthcheck:** [http://localhost:8000/health](http://localhost:8000/health)
+
+
 ## Documentación
 
 | Documento | Responde la pregunta | Link |
