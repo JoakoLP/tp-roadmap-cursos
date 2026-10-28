@@ -1,0 +1,16 @@
+[project]
+name = "openroadmap-backend"
+version = "0.1.0"
+description = "Backend API para OpenRoadmap - TP Desarrollo de Software"
+authors = [
+    { name = "Joaquin Takara", email = "joakotakara@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "pydantic-settings>=2.0.0",
+    "uvicorn[standard]>=0.30.0",
+]
+
+[tool.uv]
+package = false
